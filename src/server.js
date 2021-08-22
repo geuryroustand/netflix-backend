@@ -1,7 +1,7 @@
 import express from "express";
 import cors from "cors";
 import mediaRouter from "./services/media/media.js";
-import reviewRouter from "./services/review/review.js";
+// import reviewRouter from "./services/review/review.js";
 
 import listEndpoints from "express-list-endpoints";
 const server = express();
