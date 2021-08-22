@@ -9,5 +9,13 @@ const mediaPath = join(
   "../data/media.json"
 );
 
+const reviewsPath = join(
+  dirname(fileURLToPath(import.meta.url)),
+  "../data/reviews.json"
+);
+
 export const getMedia = () => readJSON(mediaPath);
 export const writeMedia = (content) => writeJSON(mediaPath, content);
+
+export const getReview = () => readJSON(reviewsPath);
+export const writeReview = (content) => writeJSON(reviewsPath, content);
