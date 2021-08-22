@@ -8,7 +8,7 @@ const server = express();
 
 const port = process.env.PORT;
 
-const whiteList = [process.env.FE_DEV_URL];
+const whiteList = [process.env.FE_DEV_URL, process.env.FE_PROD_URL];
 
 const corsOpts = {
   origin: (origin, next) => {
