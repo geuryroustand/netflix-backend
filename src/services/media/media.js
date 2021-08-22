@@ -138,11 +138,11 @@ mediaRouter.put(
       const foundMedia = medias.find(
         (media) => media.imdbID === req.params.mediaId
       );
+      const newMedia = { ...foundMedia, poster: req.file.path };
+
       if (!foundMedia) {
         next(createHttpError(404, ` Id ${req.params.mediaId} not found`));
       }
-
-      const newMedia = { ...foundMedia, poster: req.file.path };
 
       restMedia.push(newMedia);
 
